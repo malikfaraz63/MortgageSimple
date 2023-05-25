@@ -19,6 +19,7 @@ class LoginViewController: UIViewController, ASAuthorizationControllerDelegate, 
     
     fileprivate var currentNonce: String?
     
+    var delegate: LoginViewDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,14 +34,20 @@ class LoginViewController: UIViewController, ASAuthorizationControllerDelegate, 
         appleAuthButton.center = appleAuthButtonView.center
     }
     
+    // MARK: Sign In
+    
     func signIn(with credential: AuthCredential) {
         Auth.auth().signIn(with: credential) { authResult, error in
-            guard error == nil else {
-                return
-            }
+            guard error == nil else { return }
+            guard let authResult = authResult else { return }
             
+            self.dismiss(animated: true) {
+                self.delegate?.userDidLogin(user: authResult.user)
+            }
         }
     }
+    
+    // MARK: Google
     
     @IBAction func googleSignIn() {
         guard let clientID = FirebaseApp.app()?.options.clientID else { return }
@@ -64,9 +71,11 @@ class LoginViewController: UIViewController, ASAuthorizationControllerDelegate, 
 
             let credential = GoogleAuthProvider.credential(withIDToken: idToken, accessToken: user.accessToken.tokenString)
 
-            Auth.auth().signIn(with: credential)
+            self.signIn(with: credential)
         }
     }
+    
+    // MARK: Apple
     
     @objc func appleSignIn() {
         startSignInWithAppleFlow()
@@ -85,6 +94,8 @@ class LoginViewController: UIViewController, ASAuthorizationControllerDelegate, 
         authorizationController.presentationContextProvider = self
         authorizationController.performRequests()
     }
+    
+    // MARK: Miscellaneous
     
     private func randomNonceString(length: Int = 32) -> String {
           precondition(length > 0)
@@ -146,13 +157,4 @@ class LoginViewController: UIViewController, ASAuthorizationControllerDelegate, 
     @IBAction func dismiss() {
         dismiss(animated: true)
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 }

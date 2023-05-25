@@ -13,9 +13,22 @@
 		D90601BB2A197C740087A953 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = D90601BA2A197C740087A953 /* GoogleSignInSwift */; };
 		D90601BF2A197F700087A953 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D90601BE2A197F6F0087A953 /* GoogleService-Info.plist */; };
 		D90601C12A1985B20087A953 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90601C02A1985B20087A953 /* LoginViewController.swift */; };
-		D92DA6C12A1A590400C1209A /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92DA6C02A1A590400C1209A /* TabBarController.swift */; };
+		D91A27C52A1F893000E97790 /* FatProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91A27C42A1F893000E97790 /* FatProgressView.swift */; };
+		D91A27C72A1F94B000E97790 /* Mortgage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91A27C62A1F94B000E97790 /* Mortgage.swift */; };
+		D91A27C92A1F94B900E97790 /* MortgageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91A27C82A1F94B900E97790 /* MortgageModel.swift */; };
 		D92DA6C42A1A61C600C1209A /* CalculatorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92DA6C32A1A61C600C1209A /* CalculatorsViewController.swift */; };
 		D92DA6C62A1A6F5800C1209A /* MortgageCalculatorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92DA6C52A1A6F5800C1209A /* MortgageCalculatorController.swift */; };
+		D94529D32A1EAF280096C1CE /* MortgageSettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94529D22A1EAF280096C1CE /* MortgageSettingsManager.swift */; };
+		D94529D82A1EBAFD0096C1CE /* MortgagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94529D72A1EBAFD0096C1CE /* MortgagesViewController.swift */; };
+		D94529DA2A1EC63D0096C1CE /* MortgageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94529D92A1EC63D0096C1CE /* MortgageCell.swift */; };
+		D94CD28A2A1CC7D4007B96A7 /* LoginViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94CD2892A1CC7D4007B96A7 /* LoginViewDelegate.swift */; };
+		D94CD28D2A1CC98D007B96A7 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94CD28C2A1CC98D007B96A7 /* ProfileViewController.swift */; };
+		D94CD28F2A1CCACD007B96A7 /* SegueTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94CD28E2A1CCACD007B96A7 /* SegueTag.swift */; };
+		D94CD2912A1CCD6B007B96A7 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94CD2902A1CCD6B007B96A7 /* UIImageView.swift */; };
+		D94CD2952A1CF9B7007B96A7 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94CD2942A1CF9B7007B96A7 /* UserModel.swift */; };
+		D94CD2972A1D407B007B96A7 /* SetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94CD2962A1D407B007B96A7 /* SetupViewController.swift */; };
+		D94CD2992A1D42C0007B96A7 /* SetupViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94CD2982A1D42C0007B96A7 /* SetupViewDelegate.swift */; };
+		D94CD29B2A1D43DC007B96A7 /* StoryboardTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94CD29A2A1D43DC007B96A7 /* StoryboardTag.swift */; };
 		D9AE063D2A1C121A008B04EB /* FatSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9AE063C2A1C121A008B04EB /* FatSlider.swift */; };
 		D9AE06442A1C1603008B04EB /* BorrowingCalculatorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9AE06432A1C1603008B04EB /* BorrowingCalculatorController.swift */; };
 		D9AE06462A1C19A8008B04EB /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9AE06452A1C19A8008B04EB /* Utility.swift */; };
@@ -30,9 +43,22 @@
 		D90601B82A1974890087A953 /* MortgageSimple.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MortgageSimple.entitlements; sourceTree = "<group>"; };
 		D90601BE2A197F6F0087A953 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../.Trash/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D90601C02A1985B20087A953 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		D92DA6C02A1A590400C1209A /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		D91A27C42A1F893000E97790 /* FatProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FatProgressView.swift; sourceTree = "<group>"; };
+		D91A27C62A1F94B000E97790 /* Mortgage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mortgage.swift; sourceTree = "<group>"; };
+		D91A27C82A1F94B900E97790 /* MortgageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MortgageModel.swift; sourceTree = "<group>"; };
 		D92DA6C32A1A61C600C1209A /* CalculatorsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorsViewController.swift; sourceTree = "<group>"; };
 		D92DA6C52A1A6F5800C1209A /* MortgageCalculatorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MortgageCalculatorController.swift; sourceTree = "<group>"; };
+		D94529D22A1EAF280096C1CE /* MortgageSettingsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MortgageSettingsManager.swift; sourceTree = "<group>"; };
+		D94529D72A1EBAFD0096C1CE /* MortgagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MortgagesViewController.swift; sourceTree = "<group>"; };
+		D94529D92A1EC63D0096C1CE /* MortgageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MortgageCell.swift; sourceTree = "<group>"; };
+		D94CD2892A1CC7D4007B96A7 /* LoginViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewDelegate.swift; sourceTree = "<group>"; };
+		D94CD28C2A1CC98D007B96A7 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		D94CD28E2A1CCACD007B96A7 /* SegueTag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueTag.swift; sourceTree = "<group>"; };
+		D94CD2902A1CCD6B007B96A7 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
+		D94CD2942A1CF9B7007B96A7 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		D94CD2962A1D407B007B96A7 /* SetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupViewController.swift; sourceTree = "<group>"; };
+		D94CD2982A1D42C0007B96A7 /* SetupViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupViewDelegate.swift; sourceTree = "<group>"; };
+		D94CD29A2A1D43DC007B96A7 /* StoryboardTag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardTag.swift; sourceTree = "<group>"; };
 		D9AE063C2A1C121A008B04EB /* FatSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FatSlider.swift; sourceTree = "<group>"; };
 		D9AE06432A1C1603008B04EB /* BorrowingCalculatorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorrowingCalculatorController.swift; sourceTree = "<group>"; };
 		D9AE06452A1C19A8008B04EB /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
@@ -70,12 +96,54 @@
 			path = Calculators;
 			sourceTree = "<group>";
 		};
+		D94529D62A1EB9D70096C1CE /* Mortgages */ = {
+			isa = PBXGroup;
+			children = (
+				D94529D72A1EBAFD0096C1CE /* MortgagesViewController.swift */,
+				D94529D92A1EC63D0096C1CE /* MortgageCell.swift */,
+				D91A27C62A1F94B000E97790 /* Mortgage.swift */,
+				D91A27C82A1F94B900E97790 /* MortgageModel.swift */,
+			);
+			path = Mortgages;
+			sourceTree = "<group>";
+		};
+		D94CD2882A1CC33D007B96A7 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				D90601C02A1985B20087A953 /* LoginViewController.swift */,
+				D94CD2892A1CC7D4007B96A7 /* LoginViewDelegate.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		D94CD28B2A1CC97A007B96A7 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				D94CD28C2A1CC98D007B96A7 /* ProfileViewController.swift */,
+				D94CD2962A1D407B007B96A7 /* SetupViewController.swift */,
+				D94CD2982A1D42C0007B96A7 /* SetupViewDelegate.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		D94CD2932A1CF98D007B96A7 /* MortgagesData */ = {
+			isa = PBXGroup;
+			children = (
+				D94CD2942A1CF9B7007B96A7 /* UserModel.swift */,
+				D94529D22A1EAF280096C1CE /* MortgageSettingsManager.swift */,
+			);
+			path = MortgagesData;
+			sourceTree = "<group>";
+		};
 		D9AE063B2A1C1205008B04EB /* Utility */ = {
 			isa = PBXGroup;
 			children = (
-				D92DA6C02A1A590400C1209A /* TabBarController.swift */,
+				D91A27C42A1F893000E97790 /* FatProgressView.swift */,
 				D9AE063C2A1C121A008B04EB /* FatSlider.swift */,
 				D9AE06452A1C19A8008B04EB /* Utility.swift */,
+				D94CD28E2A1CCACD007B96A7 /* SegueTag.swift */,
+				D94CD2902A1CCD6B007B96A7 /* UIImageView.swift */,
+				D94CD29A2A1D43DC007B96A7 /* StoryboardTag.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -83,7 +151,10 @@
 		D9AE063E2A1C152A008B04EB /* App */ = {
 			isa = PBXGroup;
 			children = (
-				D9AE06422A1C1593008B04EB /* Login */,
+				D94529D62A1EB9D70096C1CE /* Mortgages */,
+				D94CD2932A1CF98D007B96A7 /* MortgagesData */,
+				D94CD28B2A1CC97A007B96A7 /* Profile */,
+				D94CD2882A1CC33D007B96A7 /* Authentication */,
 				D92DA6C22A1A61A600C1209A /* Calculators */,
 				D9AE063B2A1C1205008B04EB /* Utility */,
 				D9FE94342A157668008D713C /* LaunchScreen.storyboard */,
@@ -100,14 +171,6 @@
 				D9FE94322A157668008D713C /* Assets.xcassets */,
 			);
 			path = Auxilary;
-			sourceTree = "<group>";
-		};
-		D9AE06422A1C1593008B04EB /* Login */ = {
-			isa = PBXGroup;
-			children = (
-				D90601C02A1985B20087A953 /* LoginViewController.swift */,
-			);
-			path = Login;
 			sourceTree = "<group>";
 		};
 		D9FE941D2A157667008D713C = {
@@ -223,11 +286,24 @@
 				D92DA6C42A1A61C600C1209A /* CalculatorsViewController.swift in Sources */,
 				D90601C12A1985B20087A953 /* LoginViewController.swift in Sources */,
 				D9AE06462A1C19A8008B04EB /* Utility.swift in Sources */,
+				D94CD29B2A1D43DC007B96A7 /* StoryboardTag.swift in Sources */,
+				D94529D32A1EAF280096C1CE /* MortgageSettingsManager.swift in Sources */,
+				D94CD2952A1CF9B7007B96A7 /* UserModel.swift in Sources */,
+				D94CD2912A1CCD6B007B96A7 /* UIImageView.swift in Sources */,
+				D91A27C92A1F94B900E97790 /* MortgageModel.swift in Sources */,
+				D91A27C52A1F893000E97790 /* FatProgressView.swift in Sources */,
+				D91A27C72A1F94B000E97790 /* Mortgage.swift in Sources */,
 				D9AE06442A1C1603008B04EB /* BorrowingCalculatorController.swift in Sources */,
+				D94CD2972A1D407B007B96A7 /* SetupViewController.swift in Sources */,
 				D9AE063D2A1C121A008B04EB /* FatSlider.swift in Sources */,
-				D92DA6C12A1A590400C1209A /* TabBarController.swift in Sources */,
+				D94CD2992A1D42C0007B96A7 /* SetupViewDelegate.swift in Sources */,
+				D94CD28D2A1CC98D007B96A7 /* ProfileViewController.swift in Sources */,
+				D94529D82A1EBAFD0096C1CE /* MortgagesViewController.swift in Sources */,
 				D92DA6C62A1A6F5800C1209A /* MortgageCalculatorController.swift in Sources */,
+				D94CD28A2A1CC7D4007B96A7 /* LoginViewDelegate.swift in Sources */,
+				D94529DA2A1EC63D0096C1CE /* MortgageCell.swift in Sources */,
 				D9FE942A2A157667008D713C /* AppDelegate.swift in Sources */,
+				D94CD28F2A1CCACD007B96A7 /* SegueTag.swift in Sources */,
 				D9FE942C2A157667008D713C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

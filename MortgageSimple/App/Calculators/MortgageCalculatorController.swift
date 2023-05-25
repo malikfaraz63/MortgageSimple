@@ -27,7 +27,7 @@ class MortgageCalculatorController: UIViewController {
     
     @IBAction func loanSliderChanged(_ loanSlider: UISlider) {
         loan = loanSlider.value
-        loanLabel.text = "£\(Utility.getFormattedNumber(loan))"
+        loanLabel.text = "£\(Utility.getFormattedNumber(loan, decimalPoints: 0))"
         calculateRepayment()
     }
     
