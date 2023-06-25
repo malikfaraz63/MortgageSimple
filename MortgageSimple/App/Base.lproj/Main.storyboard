@@ -224,6 +224,9 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" image="plus" catalog="system"/>
+                                <connections>
+                                    <segue destination="cYf-iu-EX9" kind="showDetail" identifier="addMortgage" id="Qdg-S6-cva"/>
+                                </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="AXm-M4-AbG">
                                 <rect key="frame" x="16" y="219" width="361" height="550"/>
@@ -313,6 +316,7 @@
                                             <outlet property="remainingAmountLabel" destination="CcK-lN-n8h" id="va6-dY-KaO"/>
                                             <outlet property="repaymentLabel" destination="87L-u1-B4e" id="ERm-z3-tdU"/>
                                             <outlet property="repaymentProgressView" destination="0Dt-ej-TQ1" id="ebd-Zh-qxF"/>
+                                            <segue destination="LLk-PP-B4a" kind="showDetail" id="vW7-H3-d2P"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -349,6 +353,92 @@
             </objects>
             <point key="canvasLocation" x="1846.564885496183" y="672.53521126760563"/>
         </scene>
+        <!--Hosting Controller-->
+        <scene sceneID="9bl-UY-DTw">
+            <objects>
+                <hostingController id="LLk-PP-B4a" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ost-hk-i3x" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2752" y="673"/>
+        </scene>
+        <!--Add Mortgage View Controller-->
+        <scene sceneID="Y9H-bU-iwY">
+            <objects>
+                <viewController id="cYf-iu-EX9" customClass="AddMortgageViewController" customModule="MortgageSimple" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="siq-1F-pNc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="P4v-pF-Wu4">
+                                <rect key="frame" x="16" y="20.000000000000004" width="361" height="34.333333333333343"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v0h-je-2UA">
+                                        <rect key="frame" x="0.0" y="0.0" width="76.666666666666671" height="34.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Cancel"/>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Mortgage" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6sN-vW-rJK">
+                                        <rect key="frame" x="128.66666666666666" y="0.0" width="111.33333333333334" height="34.333333333333336"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pjM-zT-lmQ">
+                                        <rect key="frame" x="300" y="0.0" width="61" height="34.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Save"/>
+                                        <connections>
+                                            <action selector="saveMortgage" destination="cYf-iu-EX9" eventType="touchUpInside" id="Sxg-28-dBS"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="AuU-Vx-htw">
+                                <rect key="frame" x="16" y="94.333333333333314" width="361" height="80"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title (i.e. 5 Year Fixed)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hSJ-OQ-F0O">
+                                        <rect key="frame" x="0.0" y="0.0" width="361" height="40"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="cYf-iu-EX9" id="5GA-JM-XVQ"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Lender (i.e. HSBC)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2zw-to-gEP">
+                                        <rect key="frame" x="0.0" y="40.000000000000014" width="361" height="40"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="cYf-iu-EX9" id="N6W-YJ-Hkx"/>
+                                        </connections>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="qEc-ht-EKu"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="m1H-YU-PCp"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="m1H-YU-PCp" firstAttribute="trailing" secondItem="P4v-pF-Wu4" secondAttribute="trailing" constant="16" id="0nU-Lt-mO3"/>
+                            <constraint firstItem="AuU-Vx-htw" firstAttribute="top" secondItem="P4v-pF-Wu4" secondAttribute="bottom" constant="40" id="SSa-MT-Tue"/>
+                            <constraint firstItem="P4v-pF-Wu4" firstAttribute="top" secondItem="m1H-YU-PCp" secondAttribute="top" constant="20" id="Yzo-EE-gBp"/>
+                            <constraint firstItem="m1H-YU-PCp" firstAttribute="trailing" secondItem="AuU-Vx-htw" secondAttribute="trailing" constant="16" id="fXB-39-sDM"/>
+                            <constraint firstItem="P4v-pF-Wu4" firstAttribute="leading" secondItem="m1H-YU-PCp" secondAttribute="leading" constant="16" id="vsK-0k-GvT"/>
+                            <constraint firstItem="AuU-Vx-htw" firstAttribute="leading" secondItem="m1H-YU-PCp" secondAttribute="leading" constant="16" id="zf9-t2-JHe"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="lenderTextField" destination="2zw-to-gEP" id="63T-UD-aw8"/>
+                        <outlet property="saveMortgageButton" destination="pjM-zT-lmQ" id="CPh-Wy-KlM"/>
+                        <outlet property="titleTextField" destination="hSJ-OQ-F0O" id="SgV-wZ-AQ5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bko-85-wW1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3432.8244274809158" y="672.53521126760563"/>
+        </scene>
         <!--Chat-->
         <scene sceneID="9IM-aM-AtC">
             <objects>
@@ -363,7 +453,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1W6-Zh-F64" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="450" y="1735"/>
+            <point key="canvasLocation" x="215" y="1735"/>
         </scene>
         <!--Profile-->
         <scene sceneID="Xc6-UT-p9D">
@@ -961,7 +1051,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wj3-WT-rfa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3063" y="1350"/>
+            <point key="canvasLocation" x="2752" y="1350"/>
         </scene>
         <!--Borrowing Calculator Controller-->
         <scene sceneID="Jcv-W8-EfQ">
@@ -1125,7 +1215,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Buq-oR-7XJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3792" y="1350"/>
+            <point key="canvasLocation" x="3433" y="1350"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Yf9-G2-1U1">

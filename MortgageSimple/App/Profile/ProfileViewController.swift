@@ -27,8 +27,6 @@ class ProfileViewController: UIViewController, LoginViewDelegate, SetupViewDeleg
     @IBOutlet weak var loadingUserIndicator: UIActivityIndicatorView!
     
     let db = Firestore.firestore()
-    let defaults = UserDefaults.standard
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -73,7 +71,7 @@ class ProfileViewController: UIViewController, LoginViewDelegate, SetupViewDeleg
         profileInfoView.isHidden = false
         profileImageView.layer.cornerRadius = 50
         
-        defaults.setValue(user.uid, forKey: "documentID")
+        MortgageSettingsManager.setUserID(to: user.uid)
         
         if let url = user.photoURL {
             profileImageView.load(url: url)
@@ -108,7 +106,9 @@ class ProfileViewController: UIViewController, LoginViewDelegate, SetupViewDeleg
     func userDidSetup(withUser userModel: UserModel) {
         updateDisplay(withUser: userModel)
         
-        guard let uid = defaults.string(forKey: "documentID") else { return }
+        guard let uid = MortgageSettingsManager.getUserID() else { return }
+        
+        // TODO: Cleanup with encodeIfPresent
         
         var data: [String: Any] = [
             "address": userModel.address,
@@ -128,7 +128,11 @@ class ProfileViewController: UIViewController, LoginViewDelegate, SetupViewDeleg
         db
             .collection("users")
             .document(uid)
-            .setData(data)
+            .setData(data) { error in
+                if let error = error {
+                    print("Error: \(error.localizedDescription)")
+                }
+            }
     }
     
     // MARK: Display Updates

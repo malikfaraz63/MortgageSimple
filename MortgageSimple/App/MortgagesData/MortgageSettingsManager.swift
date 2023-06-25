@@ -21,4 +21,8 @@ class MortgageSettingsManager {
     static func deleteUser() {
         defaults.removeObject(forKey: "documentID")
     }
+    
+    static func setUserID(to uid: String) {
+        defaults.setValue(uid, forKey: "documentID")
+    }
 }

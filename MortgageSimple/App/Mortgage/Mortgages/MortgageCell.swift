@@ -27,10 +27,6 @@ class MortgageCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func setup(fromMortgage mortgage: Mortgage) {
-        
-    }
-    
     override func layoutSubviews() {
         super.layoutSubviews()
         
