@@ -31,8 +31,8 @@
 		D9AE063D2A1C121A008B04EB /* FatSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9AE063C2A1C121A008B04EB /* FatSlider.swift */; };
 		D9AE06442A1C1603008B04EB /* BorrowingCalculatorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9AE06432A1C1603008B04EB /* BorrowingCalculatorController.swift */; };
 		D9AE06462A1C19A8008B04EB /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9AE06452A1C19A8008B04EB /* Utility.swift */; };
-		D9D638A92A21470900AED7E5 /* AddMortgageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D638A82A21470900AED7E5 /* AddMortgageViewController.swift */; };
 		D9D638AB2A21473300AED7E5 /* AddMortgageViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D638AA2A21473300AED7E5 /* AddMortgageViewDelegate.swift */; };
+		D9DAC4DE2A4C8DFD001FE503 /* AddMortgageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9DAC4DD2A4C8DFD001FE503 /* AddMortgageViewController.swift */; };
 		D9FE942A2A157667008D713C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FE94292A157667008D713C /* AppDelegate.swift */; };
 		D9FE942C2A157667008D713C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FE942B2A157667008D713C /* SceneDelegate.swift */; };
 		D9FE94312A157667008D713C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9FE942F2A157667008D713C /* Main.storyboard */; };
@@ -62,8 +62,8 @@
 		D9AE063C2A1C121A008B04EB /* FatSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FatSlider.swift; sourceTree = "<group>"; };
 		D9AE06432A1C1603008B04EB /* BorrowingCalculatorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorrowingCalculatorController.swift; sourceTree = "<group>"; };
 		D9AE06452A1C19A8008B04EB /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
-		D9D638A82A21470900AED7E5 /* AddMortgageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMortgageViewController.swift; sourceTree = "<group>"; };
 		D9D638AA2A21473300AED7E5 /* AddMortgageViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMortgageViewDelegate.swift; sourceTree = "<group>"; };
+		D9DAC4DD2A4C8DFD001FE503 /* AddMortgageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMortgageViewController.swift; sourceTree = "<group>"; };
 		D9FE94262A157667008D713C /* MortgageSimple.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MortgageSimple.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9FE94292A157667008D713C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D9FE942B2A157667008D713C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -186,8 +186,8 @@
 		D9D638AD2A21475300AED7E5 /* AddMortgage */ = {
 			isa = PBXGroup;
 			children = (
-				D9D638A82A21470900AED7E5 /* AddMortgageViewController.swift */,
 				D9D638AA2A21473300AED7E5 /* AddMortgageViewDelegate.swift */,
+				D9DAC4DD2A4C8DFD001FE503 /* AddMortgageViewController.swift */,
 			);
 			path = AddMortgage;
 			sourceTree = "<group>";
@@ -310,9 +310,9 @@
 				D94529D32A1EAF280096C1CE /* MortgageSettingsManager.swift in Sources */,
 				D94CD2952A1CF9B7007B96A7 /* UserModel.swift in Sources */,
 				D94CD2912A1CCD6B007B96A7 /* UIImageView.swift in Sources */,
+				D9DAC4DE2A4C8DFD001FE503 /* AddMortgageViewController.swift in Sources */,
 				D91A27C92A1F94B900E97790 /* MortgageModel.swift in Sources */,
 				D91A27C72A1F94B000E97790 /* MortgageManager.swift in Sources */,
-				D9D638A92A21470900AED7E5 /* AddMortgageViewController.swift in Sources */,
 				D9AE06442A1C1603008B04EB /* BorrowingCalculatorController.swift in Sources */,
 				D94CD2972A1D407B007B96A7 /* SetupViewController.swift in Sources */,
 				D9AE063D2A1C121A008B04EB /* FatSlider.swift in Sources */,
