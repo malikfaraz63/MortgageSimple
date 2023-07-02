@@ -202,7 +202,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mortgages" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0ON-xw-Ohq">
-                                <rect key="frame" x="16" y="159" width="361" height="36"/>
+                                <rect key="frame" x="16" y="99" width="361" height="36"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -217,7 +217,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hUz-uP-0P0">
-                                <rect key="frame" x="337" y="159" width="40" height="40"/>
+                                <rect key="frame" x="337" y="99" width="40" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="40" id="BaD-SH-hoa"/>
                                     <constraint firstAttribute="height" constant="40" id="L2a-4c-XfE"/>
@@ -225,11 +225,11 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" image="plus" catalog="system"/>
                                 <connections>
-                                    <segue destination="89p-Gn-7Sl" kind="showDetail" identifier="addMortgage" id="9Qd-XH-e1q"/>
+                                    <segue destination="89p-Gn-7Sl" kind="show" identifier="addMortgage" id="9Qd-XH-e1q"/>
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="AXm-M4-AbG">
-                                <rect key="frame" x="16" y="219" width="361" height="550"/>
+                                <rect key="frame" x="16" y="159" width="361" height="610"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="MortgageCell" rowHeight="100" id="g8E-I1-uxM" customClass="MortgageCell" customModule="MortgageSimple" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="361" height="100"/>
@@ -316,7 +316,6 @@
                                             <outlet property="remainingAmountLabel" destination="CcK-lN-n8h" id="va6-dY-KaO"/>
                                             <outlet property="repaymentLabel" destination="87L-u1-B4e" id="ERm-z3-tdU"/>
                                             <outlet property="repaymentProgressView" destination="0Dt-ej-TQ1" id="ebd-Zh-qxF"/>
-                                            <segue destination="LLk-PP-B4a" kind="showDetail" id="vW7-H3-d2P"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -336,10 +335,10 @@
                             <constraint firstItem="EAd-im-ZUK" firstAttribute="trailing" secondItem="hUz-uP-0P0" secondAttribute="trailing" constant="16" id="ORv-je-ax5"/>
                             <constraint firstItem="EAd-im-ZUK" firstAttribute="trailing" secondItem="AXm-M4-AbG" secondAttribute="trailing" constant="16" id="lMy-aE-5kB"/>
                             <constraint firstItem="0ON-xw-Ohq" firstAttribute="leading" secondItem="EAd-im-ZUK" secondAttribute="leading" constant="16" id="oXb-yU-jtS"/>
-                            <constraint firstItem="hUz-uP-0P0" firstAttribute="top" secondItem="EAd-im-ZUK" secondAttribute="top" constant="100" id="pNG-Oa-Ikf"/>
+                            <constraint firstItem="hUz-uP-0P0" firstAttribute="top" secondItem="EAd-im-ZUK" secondAttribute="top" constant="40" id="pNG-Oa-Ikf"/>
                             <constraint firstItem="EAd-im-ZUK" firstAttribute="trailing" secondItem="0ON-xw-Ohq" secondAttribute="trailing" constant="16" id="pPQ-zh-bNE"/>
                             <constraint firstItem="AXm-M4-AbG" firstAttribute="leading" secondItem="EAd-im-ZUK" secondAttribute="leading" constant="16" id="qbV-yl-kDK"/>
-                            <constraint firstItem="0ON-xw-Ohq" firstAttribute="top" secondItem="EAd-im-ZUK" secondAttribute="top" constant="100" id="zMi-Cq-QDn"/>
+                            <constraint firstItem="0ON-xw-Ohq" firstAttribute="top" secondItem="EAd-im-ZUK" secondAttribute="top" constant="40" id="zMi-Cq-QDn"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Mortgages" image="rectangle.stack" catalog="system" selectedImage="rectangle.stack.fill" id="0e3-Gd-N5K"/>
@@ -353,20 +352,12 @@
             </objects>
             <point key="canvasLocation" x="1846.564885496183" y="672.53521126760563"/>
         </scene>
-        <!--Hosting Controller-->
-        <scene sceneID="9bl-UY-DTw">
-            <objects>
-                <hostingController id="LLk-PP-B4a" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ost-hk-i3x" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2752" y="673"/>
-        </scene>
         <!--Add Mortgage View Controller-->
         <scene sceneID="9xZ-Ed-fYM">
             <objects>
                 <tableViewController id="89p-Gn-7Sl" customClass="AddMortgageViewController" customModule="MortgageSimple" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" id="Bic-eT-BWA">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
                         <sections>
@@ -381,7 +372,7 @@
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Mortgage" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uXo-me-6o2">
                                                     <rect key="frame" x="20" y="13" width="313" height="24"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="23"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -393,7 +384,7 @@
                                                 <constraint firstAttribute="bottomMargin" secondItem="uXo-me-6o2" secondAttribute="bottom" constant="2" id="HuE-pC-K3m"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -741,6 +732,7 @@
                                                     </subviews>
                                                 </stackView>
                                             </subviews>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                             <constraints>
                                                 <constraint firstItem="Grn-45-Ifk" firstAttribute="leading" secondItem="feN-Zu-7YV" secondAttribute="leading" id="5Dc-5c-drY"/>
                                                 <constraint firstAttribute="trailing" secondItem="Grn-45-Ifk" secondAttribute="trailing" id="d6x-Xx-V0D"/>
@@ -758,6 +750,7 @@
                             <outlet property="delegate" destination="89p-Gn-7Sl" id="AlL-tp-KLo"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="yTb-kY-mUr"/>
                     <connections>
                         <outlet property="addressTextField" destination="btn-YH-9Cc" id="kfW-dH-1NL"/>
                         <outlet property="dateSelectionField" destination="B7C-nH-6vo" id="sAu-ND-dr7"/>
@@ -774,12 +767,12 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5vL-pU-aID" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4086.2595419847326" y="653.52112676056345"/>
+            <point key="canvasLocation" x="2752" y="673"/>
         </scene>
         <!--Chat-->
         <scene sceneID="9IM-aM-AtC">
             <objects>
-                <viewController id="c0c-C1-Oki" sceneMemberID="viewController">
+                <viewController id="c0c-C1-Oki" customClass="ChatViewController" customModule="MortgageSimple" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1L5-sO-Sjn">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

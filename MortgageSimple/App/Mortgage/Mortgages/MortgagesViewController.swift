@@ -8,6 +8,7 @@
 import UIKit
 import FirebaseFirestore
 import FirebaseFirestoreSwift
+import SwiftUI
 
 class MortgagesViewController: UIViewController {
 
@@ -137,6 +138,10 @@ extension MortgagesViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let cell = tableView.cellForRow(at: indexPath) else { return }
         cell.contentView.backgroundColor = .systemGray4
+        
+        guard let mortgageData = mortgagesData?[indexPath.row] else { return }
+        let userViewController = UIHostingController(rootView: MortgageDetailView(mortgageData: mortgageData))
+        show(userViewController, sender: self)
     }
     
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {

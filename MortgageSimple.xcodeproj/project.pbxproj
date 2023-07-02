@@ -33,6 +33,9 @@
 		D9AE06462A1C19A8008B04EB /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9AE06452A1C19A8008B04EB /* Utility.swift */; };
 		D9D638AB2A21473300AED7E5 /* AddMortgageViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D638AA2A21473300AED7E5 /* AddMortgageViewDelegate.swift */; };
 		D9DAC4DE2A4C8DFD001FE503 /* AddMortgageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9DAC4DD2A4C8DFD001FE503 /* AddMortgageViewController.swift */; };
+		D9DAC4E42A4F20BF001FE503 /* MortgageDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9DAC4E32A4F20BF001FE503 /* MortgageDetailView.swift */; };
+		D9DAC4E72A4F804F001FE503 /* MessageKit in Frameworks */ = {isa = PBXBuildFile; productRef = D9DAC4E62A4F804F001FE503 /* MessageKit */; };
+		D9DAC4EA2A4F8143001FE503 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9DAC4E92A4F8143001FE503 /* ChatViewController.swift */; };
 		D9FE942A2A157667008D713C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FE94292A157667008D713C /* AppDelegate.swift */; };
 		D9FE942C2A157667008D713C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FE942B2A157667008D713C /* SceneDelegate.swift */; };
 		D9FE94312A157667008D713C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9FE942F2A157667008D713C /* Main.storyboard */; };
@@ -64,6 +67,8 @@
 		D9AE06452A1C19A8008B04EB /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		D9D638AA2A21473300AED7E5 /* AddMortgageViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMortgageViewDelegate.swift; sourceTree = "<group>"; };
 		D9DAC4DD2A4C8DFD001FE503 /* AddMortgageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMortgageViewController.swift; sourceTree = "<group>"; };
+		D9DAC4E32A4F20BF001FE503 /* MortgageDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MortgageDetailView.swift; sourceTree = "<group>"; };
+		D9DAC4E92A4F8143001FE503 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		D9FE94262A157667008D713C /* MortgageSimple.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MortgageSimple.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9FE94292A157667008D713C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D9FE942B2A157667008D713C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -82,6 +87,7 @@
 				D90601B52A1970760087A953 /* FirebaseAuth in Frameworks */,
 				D90601B72A1970760087A953 /* FirebaseFirestoreSwift in Frameworks */,
 				D90601BB2A197C740087A953 /* GoogleSignInSwift in Frameworks */,
+				D9DAC4E72A4F804F001FE503 /* MessageKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,6 +158,7 @@
 		D9AE063E2A1C152A008B04EB /* App */ = {
 			isa = PBXGroup;
 			children = (
+				D9DAC4E82A4F8115001FE503 /* Chat */,
 				D94529D62A1EB9D70096C1CE /* Mortgage */,
 				D94CD2932A1CF98D007B96A7 /* MortgagesData */,
 				D94CD28B2A1CC97A007B96A7 /* Profile */,
@@ -179,6 +186,7 @@
 			children = (
 				D94529D72A1EBAFD0096C1CE /* MortgagesViewController.swift */,
 				D94529D92A1EC63D0096C1CE /* MortgageCell.swift */,
+				D9DAC4E32A4F20BF001FE503 /* MortgageDetailView.swift */,
 			);
 			path = Mortgages;
 			sourceTree = "<group>";
@@ -190,6 +198,14 @@
 				D9DAC4DD2A4C8DFD001FE503 /* AddMortgageViewController.swift */,
 			);
 			path = AddMortgage;
+			sourceTree = "<group>";
+		};
+		D9DAC4E82A4F8115001FE503 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				D9DAC4E92A4F8143001FE503 /* ChatViewController.swift */,
+			);
+			path = Chat;
 			sourceTree = "<group>";
 		};
 		D9FE941D2A157667008D713C = {
@@ -241,6 +257,7 @@
 				D90601B42A1970760087A953 /* FirebaseAuth */,
 				D90601B62A1970760087A953 /* FirebaseFirestoreSwift */,
 				D90601BA2A197C740087A953 /* GoogleSignInSwift */,
+				D9DAC4E62A4F804F001FE503 /* MessageKit */,
 			);
 			productName = MortgageSimple;
 			productReference = D9FE94262A157667008D713C /* MortgageSimple.app */;
@@ -273,6 +290,7 @@
 			packageReferences = (
 				D90601B12A1970760087A953 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				D90601B92A197C740087A953 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
+				D9DAC4E52A4F804F001FE503 /* XCRemoteSwiftPackageReference "MessageKit" */,
 			);
 			productRefGroup = D9FE94272A157667008D713C /* Products */;
 			projectDirPath = "";
@@ -316,9 +334,11 @@
 				D9AE06442A1C1603008B04EB /* BorrowingCalculatorController.swift in Sources */,
 				D94CD2972A1D407B007B96A7 /* SetupViewController.swift in Sources */,
 				D9AE063D2A1C121A008B04EB /* FatSlider.swift in Sources */,
+				D9DAC4E42A4F20BF001FE503 /* MortgageDetailView.swift in Sources */,
 				D94CD2992A1D42C0007B96A7 /* SetupViewDelegate.swift in Sources */,
 				D94CD28D2A1CC98D007B96A7 /* ProfileViewController.swift in Sources */,
 				D94529D82A1EBAFD0096C1CE /* MortgagesViewController.swift in Sources */,
+				D9DAC4EA2A4F8143001FE503 /* ChatViewController.swift in Sources */,
 				D92DA6C62A1A6F5800C1209A /* MortgageCalculatorController.swift in Sources */,
 				D94CD28A2A1CC7D4007B96A7 /* LoginViewDelegate.swift in Sources */,
 				D94529DA2A1EC63D0096C1CE /* MortgageCell.swift in Sources */,
@@ -486,7 +506,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.FMEnterprises.MortgageSimple;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -517,7 +537,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.FMEnterprises.MortgageSimple;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -566,6 +586,14 @@
 				minimumVersion = 7.0.0;
 			};
 		};
+		D9DAC4E52A4F804F001FE503 /* XCRemoteSwiftPackageReference "MessageKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/MessageKit/MessageKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -588,6 +616,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = D90601B92A197C740087A953 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
 			productName = GoogleSignInSwift;
+		};
+		D9DAC4E62A4F804F001FE503 /* MessageKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D9DAC4E52A4F804F001FE503 /* XCRemoteSwiftPackageReference "MessageKit" */;
+			productName = MessageKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

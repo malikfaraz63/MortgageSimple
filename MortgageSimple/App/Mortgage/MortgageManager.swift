@@ -23,12 +23,12 @@ class MortgageManager {
     }
     
     public static func getRepaymentLabel(forModel model: MortgageModel) -> String {
-        let repaymentString = Utility.getFormattedNumber(calculateRepayment(forModel: model), decimalPoints: 0)
+        let repaymentString = Utility.getFormattedNumber(calculateRepayment(forModel: model, deductRent: true), decimalPoints: 0)
         return "£\(repaymentString) / mo."
     }
     
     public static func getRemainingLabel(forModel model: MortgageModel) -> String {
-        let remainingRepayment = Float(getRemainingRepaymentTerms(forModel: model)) * calculateRepayment(forModel: model)
+        let remainingRepayment = Float(getRemainingRepaymentTerms(forModel: model)) * calculateRepayment(forModel: model, deductRent: false)
         
         let remainingString = Utility.getFormattedNumber(remainingRepayment, decimalPoints: 0)
         return "£\(remainingString)"
@@ -36,12 +36,19 @@ class MortgageManager {
     
     public static func getProgress(forModel model: MortgageModel) -> Float {
         let completedTerms = model.term * 12 - getRemainingRepaymentTerms(forModel: model)
-        let completedPayment = Float(completedTerms) * calculateRepayment(forModel: model)
+        let completedPayment = Float(completedTerms) * calculateRepayment(forModel: model, deductRent: false)
         
         return completedPayment / Float(model.loan)
     }
+        
+    public static func getTotalInterest(forModel model: MortgageModel) -> Int {
+        let repayment = calculateRepayment(forModel: model, deductRent: false)
+        let totalRepayment = Float(12 * model.term) * calculateRepayment(forModel: model, deductRent: false)
+        
+        return Int(totalRepayment) - model.loan
+    }
     
-    private static func calculateRepayment(forModel model: MortgageModel) -> Float {
+    public static func calculateRepayment(forModel model: MortgageModel, deductRent: Bool) -> Float {
         let r = model.rate / 12
         let P = model.loan
         let n = model.term * 12
@@ -56,10 +63,12 @@ class MortgageManager {
             }
         }
         
-        if repayment > Float(model.rent) {
-            repayment -= Float(model.rent)
-        } else {
-            repayment = 0
+        if (deductRent) {
+            if repayment > Float(model.rent) {
+                repayment -= Float(model.rent)
+            } else {
+                repayment = 0
+            }
         }
         
         return repayment
