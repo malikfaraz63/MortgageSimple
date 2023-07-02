@@ -12,7 +12,7 @@
         <!--Login View Controller-->
         <scene sceneID="uHQ-dQ-j8v">
             <objects>
-                <viewController id="wm1-7V-4lQ" customClass="LoginViewController" customModule="MortgageSimple" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="loginViewController" id="wm1-7V-4lQ" customClass="LoginViewController" customModule="MortgageSimple" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Xaa-yV-Qb8">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -40,10 +40,11 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="lnh-Td-IqI"/>
+                                    <constraint firstAttribute="height" constant="80" id="mWf-eS-E6K"/>
                                 </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c8x-0q-2Oe">
-                                <rect key="frame" x="157.66666666666666" y="100" width="77.666666666666657" height="36"/>
+                                <rect key="frame" x="157.66666666666666" y="40" width="77.666666666666657" height="36"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -54,8 +55,8 @@
                         <constraints>
                             <constraint firstItem="c8x-0q-2Oe" firstAttribute="centerX" secondItem="Xaa-yV-Qb8" secondAttribute="centerX" id="394-nU-eqR"/>
                             <constraint firstItem="ZQt-uy-KwH" firstAttribute="centerX" secondItem="Xaa-yV-Qb8" secondAttribute="centerX" id="HXb-Sa-3mm"/>
-                            <constraint firstItem="c8x-0q-2Oe" firstAttribute="top" secondItem="2vX-4f-nJT" secondAttribute="top" constant="100" id="a0o-Oo-jbf"/>
-                            <constraint firstItem="ZQt-uy-KwH" firstAttribute="centerY" secondItem="Xaa-yV-Qb8" secondAttribute="centerY" id="hFK-wj-r5p"/>
+                            <constraint firstItem="c8x-0q-2Oe" firstAttribute="top" secondItem="2vX-4f-nJT" secondAttribute="top" constant="40" id="a0o-Oo-jbf"/>
+                            <constraint firstItem="ZQt-uy-KwH" firstAttribute="centerY" secondItem="Xaa-yV-Qb8" secondAttribute="centerY" id="xxX-MJ-HEY"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="5Ro-Tg-gTT"/>
@@ -76,7 +77,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Account Setup" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TZY-Rz-Klg">
-                                <rect key="frame" x="92.666666666666671" y="159" width="207.66666666666663" height="36"/>
+                                <rect key="frame" x="92.666666666666671" y="99" width="207.66666666666663" height="36"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -160,7 +161,7 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gm7-1U-7Qu">
-                                <rect key="frame" x="116.66666666666669" y="626" width="160" height="34.333333333333371"/>
+                                <rect key="frame" x="116.66666666666669" y="566" width="160" height="34.333333333333371"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="160" id="T12-Sj-Tya"/>
                                 </constraints>
@@ -175,11 +176,11 @@
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <constraints>
                             <constraint firstItem="r25-OK-7cA" firstAttribute="centerX" secondItem="IqY-Rj-608" secondAttribute="centerX" id="1Hs-IQ-rMd"/>
-                            <constraint firstItem="TZY-Rz-Klg" firstAttribute="top" secondItem="vVd-X0-Gum" secondAttribute="top" constant="100" id="8p9-7d-5Tf"/>
+                            <constraint firstItem="r25-OK-7cA" firstAttribute="centerY" secondItem="IqY-Rj-608" secondAttribute="centerY" id="2N2-wb-xp6"/>
+                            <constraint firstItem="TZY-Rz-Klg" firstAttribute="top" secondItem="vVd-X0-Gum" secondAttribute="top" constant="40" id="8p9-7d-5Tf"/>
                             <constraint firstItem="gm7-1U-7Qu" firstAttribute="centerX" secondItem="IqY-Rj-608" secondAttribute="centerX" id="Teq-2G-hky"/>
-                            <constraint firstItem="r25-OK-7cA" firstAttribute="centerY" secondItem="IqY-Rj-608" secondAttribute="centerY" id="hMM-6e-IzF"/>
                             <constraint firstItem="TZY-Rz-Klg" firstAttribute="centerX" secondItem="IqY-Rj-608" secondAttribute="centerX" id="iRo-o2-dMU"/>
-                            <constraint firstItem="gm7-1U-7Qu" firstAttribute="top" secondItem="r25-OK-7cA" secondAttribute="bottom" constant="80" id="s6y-YH-v1p"/>
+                            <constraint firstItem="gm7-1U-7Qu" firstAttribute="top" secondItem="r25-OK-7cA" secondAttribute="bottom" constant="20" id="s6y-YH-v1p"/>
                         </constraints>
                     </view>
                     <connections>

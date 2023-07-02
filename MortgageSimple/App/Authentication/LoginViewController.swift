@@ -26,6 +26,10 @@ class LoginViewController: UIViewController, ASAuthorizationControllerDelegate, 
         // Do any additional setup after loading the view.
         appleAuthButtonView.addSubview(appleAuthButton)
         appleAuthButton.addTarget(self, action: #selector(appleSignIn), for: .touchUpInside)
+        
+        modalPresentationStyle = .custom
+        guard let sheet = sheetPresentationController else { return }
+        sheet.detents = [.medium()]
     }
     
     override func viewDidLayoutSubviews() {

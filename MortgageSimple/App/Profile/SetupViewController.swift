@@ -23,6 +23,10 @@ class SetupViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         
         createAccountButton.isEnabled = false
+        
+        modalPresentationStyle = .custom
+        guard let sheet = sheetPresentationController else { return }
+        sheet.detents = [.medium()]
     }
     
     @IBAction func createAccount() {
