@@ -98,6 +98,7 @@ class ProfileViewController: UIViewController, LoginViewDelegate, SetupViewDeleg
     
     func setupNewUser(withUser user: User) {
         guard let setupController = storyboard?.instantiateViewController(identifier: StoryboardTag.setupViewController.rawValue) as? SetupViewController else { return }
+        setupController.transitioningDelegate = self
         setupController.delegate = self
         setupController.user = user
         navigationController?.showDetailViewController(setupController, sender: nil)
@@ -194,9 +195,17 @@ class ProfileViewController: UIViewController, LoginViewDelegate, SetupViewDeleg
         if segue.identifier == SegueTag.showLogin.rawValue {
             guard let loginViewController = segue.destination as? LoginViewController else { return }
             loginViewController.delegate = self
+            loginViewController.transitioningDelegate = self
+            
             logoutButton.isEnabled = false
+            
             loadingUserIndicator.startAnimating()
         }
     }
+}
 
+extension ProfileViewController: UIViewControllerTransitioningDelegate {
+    func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
+            UIPresentationController(presentedViewController: presented, presenting: presenting)
+    }
 }
