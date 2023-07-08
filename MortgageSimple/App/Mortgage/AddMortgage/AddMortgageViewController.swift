@@ -83,10 +83,10 @@ class AddMortgageViewController: UITableViewController, UITextFieldDelegate {
         let mortgage = MortgageModel(address: address, lender: lender, loan: loan, mortgageDescription: title, rate: rate / 100, rent: rent, start: start, term: term)
         
         delegate.didAddMortgage(withModel: mortgage)
-        dismiss(animated: true)
+        navigationController?.popViewController(animated: true)
     }
     
     @IBAction func cancelMortgage() {
-        dismiss(animated: true)
+        navigationController?.popViewController(animated: true)
     }
 }

@@ -17,6 +17,8 @@
 		D91A27C92A1F94B900E97790 /* MortgageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91A27C82A1F94B900E97790 /* MortgageModel.swift */; };
 		D92DA6C42A1A61C600C1209A /* CalculatorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92DA6C32A1A61C600C1209A /* CalculatorsViewController.swift */; };
 		D92DA6C62A1A6F5800C1209A /* MortgageCalculatorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92DA6C52A1A6F5800C1209A /* MortgageCalculatorController.swift */; };
+		D93E98A22A582AF600AE4943 /* MortgageMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93E98A12A582AF600AE4943 /* MortgageMessage.swift */; };
+		D93E98A42A582C2D00AE4943 /* MessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93E98A32A582C2D00AE4943 /* MessageViewModel.swift */; };
 		D94529D32A1EAF280096C1CE /* MortgageSettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94529D22A1EAF280096C1CE /* MortgageSettingsManager.swift */; };
 		D94529D82A1EBAFD0096C1CE /* MortgagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94529D72A1EBAFD0096C1CE /* MortgagesViewController.swift */; };
 		D94529DA2A1EC63D0096C1CE /* MortgageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94529D92A1EC63D0096C1CE /* MortgageCell.swift */; };
@@ -28,6 +30,7 @@
 		D94CD2972A1D407B007B96A7 /* SetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94CD2962A1D407B007B96A7 /* SetupViewController.swift */; };
 		D94CD2992A1D42C0007B96A7 /* SetupViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94CD2982A1D42C0007B96A7 /* SetupViewDelegate.swift */; };
 		D94CD29B2A1D43DC007B96A7 /* StoryboardTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94CD29A2A1D43DC007B96A7 /* StoryboardTag.swift */; };
+		D998E8362A597181007713C4 /* MortgageMessagesClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D998E8352A597181007713C4 /* MortgageMessagesClient.swift */; };
 		D9AE063D2A1C121A008B04EB /* FatSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9AE063C2A1C121A008B04EB /* FatSlider.swift */; };
 		D9AE06442A1C1603008B04EB /* BorrowingCalculatorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9AE06432A1C1603008B04EB /* BorrowingCalculatorController.swift */; };
 		D9AE06462A1C19A8008B04EB /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9AE06452A1C19A8008B04EB /* Utility.swift */; };
@@ -51,6 +54,8 @@
 		D91A27C82A1F94B900E97790 /* MortgageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MortgageModel.swift; sourceTree = "<group>"; };
 		D92DA6C32A1A61C600C1209A /* CalculatorsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorsViewController.swift; sourceTree = "<group>"; };
 		D92DA6C52A1A6F5800C1209A /* MortgageCalculatorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MortgageCalculatorController.swift; sourceTree = "<group>"; };
+		D93E98A12A582AF600AE4943 /* MortgageMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MortgageMessage.swift; sourceTree = "<group>"; };
+		D93E98A32A582C2D00AE4943 /* MessageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewModel.swift; sourceTree = "<group>"; };
 		D94529D22A1EAF280096C1CE /* MortgageSettingsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MortgageSettingsManager.swift; sourceTree = "<group>"; };
 		D94529D72A1EBAFD0096C1CE /* MortgagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MortgagesViewController.swift; sourceTree = "<group>"; };
 		D94529D92A1EC63D0096C1CE /* MortgageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MortgageCell.swift; sourceTree = "<group>"; };
@@ -62,6 +67,7 @@
 		D94CD2962A1D407B007B96A7 /* SetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupViewController.swift; sourceTree = "<group>"; };
 		D94CD2982A1D42C0007B96A7 /* SetupViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupViewDelegate.swift; sourceTree = "<group>"; };
 		D94CD29A2A1D43DC007B96A7 /* StoryboardTag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardTag.swift; sourceTree = "<group>"; };
+		D998E8352A597181007713C4 /* MortgageMessagesClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MortgageMessagesClient.swift; sourceTree = "<group>"; };
 		D9AE063C2A1C121A008B04EB /* FatSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FatSlider.swift; sourceTree = "<group>"; };
 		D9AE06432A1C1603008B04EB /* BorrowingCalculatorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorrowingCalculatorController.swift; sourceTree = "<group>"; };
 		D9AE06452A1C19A8008B04EB /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
@@ -204,6 +210,9 @@
 			isa = PBXGroup;
 			children = (
 				D9DAC4E92A4F8143001FE503 /* ChatViewController.swift */,
+				D93E98A12A582AF600AE4943 /* MortgageMessage.swift */,
+				D93E98A32A582C2D00AE4943 /* MessageViewModel.swift */,
+				D998E8352A597181007713C4 /* MortgageMessagesClient.swift */,
 			);
 			path = Chat;
 			sourceTree = "<group>";
@@ -335,10 +344,13 @@
 				D94CD2972A1D407B007B96A7 /* SetupViewController.swift in Sources */,
 				D9AE063D2A1C121A008B04EB /* FatSlider.swift in Sources */,
 				D9DAC4E42A4F20BF001FE503 /* MortgageDetailView.swift in Sources */,
+				D998E8362A597181007713C4 /* MortgageMessagesClient.swift in Sources */,
 				D94CD2992A1D42C0007B96A7 /* SetupViewDelegate.swift in Sources */,
 				D94CD28D2A1CC98D007B96A7 /* ProfileViewController.swift in Sources */,
 				D94529D82A1EBAFD0096C1CE /* MortgagesViewController.swift in Sources */,
 				D9DAC4EA2A4F8143001FE503 /* ChatViewController.swift in Sources */,
+				D93E98A42A582C2D00AE4943 /* MessageViewModel.swift in Sources */,
+				D93E98A22A582AF600AE4943 /* MortgageMessage.swift in Sources */,
 				D92DA6C62A1A6F5800C1209A /* MortgageCalculatorController.swift in Sources */,
 				D94CD28A2A1CC7D4007B96A7 /* LoginViewDelegate.swift in Sources */,
 				D94529DA2A1EC63D0096C1CE /* MortgageCell.swift in Sources */,

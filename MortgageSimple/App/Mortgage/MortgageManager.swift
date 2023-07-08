@@ -38,7 +38,7 @@ class MortgageManager {
         let completedTerms = model.term * 12 - getRemainingRepaymentTerms(forModel: model)
         let completedPayment = Float(completedTerms) * calculateRepayment(forModel: model, deductRent: false)
         
-        return completedPayment / Float(model.loan)
+        return completedPayment / Float(model.loan + getTotalInterest(forModel: model))
     }
         
     public static func getTotalInterest(forModel model: MortgageModel) -> Int {

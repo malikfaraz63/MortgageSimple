@@ -83,7 +83,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="r25-OK-7cA">
-                                <rect key="frame" x="76.666666666666686" y="306" width="240" height="240"/>
+                                <rect key="frame" x="76.666666666666686" y="155" width="240" height="240"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="rQQ-gI-bS0" userLabel="Address Stack">
                                         <rect key="frame" x="0.0" y="0.0" width="240" height="63.333333333333336"/>
@@ -95,7 +95,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NEW-Kh-xaG">
-                                                <rect key="frame" x="0.0" y="23.333333333333314" width="240" height="40"/>
+                                                <rect key="frame" x="0.0" y="23.333333333333343" width="240" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="Svo-xE-D6x"/>
                                                 </constraints>
@@ -109,7 +109,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="vGO-DW-bPf" userLabel="Address Stack">
-                                        <rect key="frame" x="0.0" y="88.333333333333314" width="240" height="63.333333333333343"/>
+                                        <rect key="frame" x="0.0" y="88.333333333333343" width="240" height="63.333333333333343"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AGE:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="72D-Dd-dzv">
                                                 <rect key="frame" x="0.0" y="0.0" width="240" height="18.333333333333332"/>
@@ -118,7 +118,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o03-ef-vV4">
-                                                <rect key="frame" x="0.0" y="23.333333333333371" width="240" height="40"/>
+                                                <rect key="frame" x="0.0" y="23.333333333333343" width="240" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="o3m-T5-O8F"/>
                                                 </constraints>
@@ -161,7 +161,7 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gm7-1U-7Qu">
-                                <rect key="frame" x="116.66666666666669" y="566" width="160" height="34.333333333333371"/>
+                                <rect key="frame" x="116.66666666666669" y="415" width="160" height="34.333333333333314"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="160" id="T12-Sj-Tya"/>
                                 </constraints>
@@ -176,10 +176,10 @@
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <constraints>
                             <constraint firstItem="r25-OK-7cA" firstAttribute="centerX" secondItem="IqY-Rj-608" secondAttribute="centerX" id="1Hs-IQ-rMd"/>
-                            <constraint firstItem="r25-OK-7cA" firstAttribute="centerY" secondItem="IqY-Rj-608" secondAttribute="centerY" id="2N2-wb-xp6"/>
                             <constraint firstItem="TZY-Rz-Klg" firstAttribute="top" secondItem="vVd-X0-Gum" secondAttribute="top" constant="40" id="8p9-7d-5Tf"/>
                             <constraint firstItem="gm7-1U-7Qu" firstAttribute="centerX" secondItem="IqY-Rj-608" secondAttribute="centerX" id="Teq-2G-hky"/>
                             <constraint firstItem="TZY-Rz-Klg" firstAttribute="centerX" secondItem="IqY-Rj-608" secondAttribute="centerX" id="iRo-o2-dMU"/>
+                            <constraint firstItem="r25-OK-7cA" firstAttribute="top" secondItem="TZY-Rz-Klg" secondAttribute="bottom" constant="20" id="lNf-1H-awO"/>
                             <constraint firstItem="gm7-1U-7Qu" firstAttribute="top" secondItem="r25-OK-7cA" secondAttribute="bottom" constant="20" id="s6y-YH-v1p"/>
                         </constraints>
                     </view>
