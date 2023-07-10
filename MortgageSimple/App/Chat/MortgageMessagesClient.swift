@@ -15,9 +15,11 @@ class MortgageMessagesClient {
     typealias MessageSendCompletion = () -> Void
     
     private let db = Firestore.firestore()
+    private var clientMessagesListener: ListenerRegistration?
+    private var companyMessagesListener: ListenerRegistration?
     
     public func addMessagesListener(forUid uid: String, source: MortgageMessageSource, completion: @escaping MessagesLoadCompletion) {
-        db
+        let listener = db
             .collection("users")
             .document(uid)
             .collection(source.rawValue)
@@ -35,6 +37,18 @@ class MortgageMessagesClient {
                     print(error)
                 }
             }
+        
+        if (source == .clientMessages) {
+            if let clientMessagesListener = clientMessagesListener {
+                clientMessagesListener.remove()
+            }
+            clientMessagesListener = listener
+        } else {
+            if let companyMessagesListener = companyMessagesListener {
+                companyMessagesListener.remove()
+            }
+            companyMessagesListener = listener
+        }
     }
     
     public func sendMessage(forUid uid: String, message: MortgageMessage) {

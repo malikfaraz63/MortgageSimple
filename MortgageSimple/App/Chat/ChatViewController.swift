@@ -20,6 +20,8 @@ public struct Message: MessageType {
 }
 
 class ChatViewController: MessagesViewController, MessagesDataSource {
+    var previousUserID: String?
+    
     var messages: [MessageType] = []
     var companyMessages: [MessageType] = []
     var clientMessages: [MessageType] = []
@@ -37,7 +39,26 @@ class ChatViewController: MessagesViewController, MessagesDataSource {
                 
         messageInputBar.sendButton.onTouchUpInside { _ in self.sendMessage() }
         
-        fetchMessages()
+        viewDidAppear(true)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        if MortgageSettingsManager.hasUser() {
+            if let previousUserID = previousUserID {
+                if MortgageSettingsManager.getUserID() != previousUserID {
+                    self.previousUserID = MortgageSettingsManager.getUserID()
+                    fetchMessages()
+                }
+            } else {
+                previousUserID = MortgageSettingsManager.getUserID()
+                fetchMessages()
+            }
+        } else {
+            messages = []
+            messagesCollectionView.reloadData()
+        }
     }
     
     var currentSender: MessageKit.SenderType {
@@ -45,10 +66,8 @@ class ChatViewController: MessagesViewController, MessagesDataSource {
     }
     
     func sendMessage() {
-        print("EEEE")
         guard let uid = MortgageSettingsManager.getUserID() else { return }
         guard let message = messageInputBar.inputTextView.text else { return }
-        print("retrieved \(message)")
         if message.count == 0 {
             return
         }
