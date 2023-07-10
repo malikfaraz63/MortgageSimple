@@ -76,6 +76,8 @@ class ChatViewController: MessagesViewController, MessagesDataSource {
             
             self.messages.sort { $0.sentDate < $1.sentDate }
             self.messagesCollectionView.reloadData()
+            
+            self.messagesCollectionView.scrollToLastItem(at: .bottom, animated: true)
         }
         
         mortgageMessagesClient.addMessagesListener(forUid: uid, source: .companyMessages) { companyMessages in
@@ -91,6 +93,8 @@ class ChatViewController: MessagesViewController, MessagesDataSource {
             
             self.messages.sort { $0.sentDate < $1.sentDate }
             self.messagesCollectionView.reloadData()
+            
+            self.messagesCollectionView.scrollToLastItem(at: .bottom, animated: true)
         }
     }
     
@@ -113,7 +117,7 @@ extension ChatViewController: MessagesDisplayDelegate, MessagesLayoutDelegate {
         }
     }
     
-    override func scrollViewDidScroll(_: UIScrollView) {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         messageInputBar.inputTextView.resignFirstResponder()
     }
 }

@@ -507,6 +507,7 @@
 				DEVELOPMENT_TEAM = WVYS68J2L5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MortgageSimple/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = MortgageSimple;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -518,7 +519,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.4.1;
+				MARKETING_VERSION = 0.5;
 				PRODUCT_BUNDLE_IDENTIFIER = com.FMEnterprises.MortgageSimple;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -538,6 +539,7 @@
 				DEVELOPMENT_TEAM = WVYS68J2L5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MortgageSimple/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = MortgageSimple;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -549,7 +551,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.4.1;
+				MARKETING_VERSION = 0.5;
 				PRODUCT_BUNDLE_IDENTIFIER = com.FMEnterprises.MortgageSimple;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
