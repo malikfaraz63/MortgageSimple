@@ -3,7 +3,8 @@
     <device id="retina6_12" orientation="portrait" appearance="dark"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -780,7 +781,9 @@
                         <viewLayoutGuide key="safeArea" id="avV-jq-G4b"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Chat" image="questionmark.bubble" catalog="system" selectedImage="questionmark.bubble.fill" id="loR-YN-o6S"/>
+                    <tabBarItem key="tabBarItem" title="Chat" selectedImage="questionmark.bubble.fill" catalog="system" id="loR-YN-o6S">
+                        <imageReference key="image" image="questionmark.bubble" catalog="system" variableValue="0.60000000000000009"/>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1W6-Zh-F64" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -17,6 +17,7 @@ class MortgageMessagesClient {
     private let db = Firestore.firestore()
     private var clientMessagesListener: ListenerRegistration?
     private var companyMessagesListener: ListenerRegistration?
+    private var unreadCompanyMessageIds: [String] = []
     
     public func addMessagesListener(forUid uid: String, source: MortgageMessageSource, completion: @escaping MessagesLoadCompletion) {
         let listener = db
@@ -30,6 +31,12 @@ class MortgageMessagesClient {
                         try messages.append(contentsOf: snapshot.documents.map { try $0.data(as: MortgageMessage.self) } )
                     } catch let error {
                         print(error)
+                    }
+                    
+                    if (source == .companyMessages) {
+                        self.unreadCompanyMessageIds = snapshot.documents
+                            .filter { !($0.data()["read"] as! Bool) }
+                            .map { $0.documentID }
                     }
                     
                     completion(messages)
@@ -49,6 +56,33 @@ class MortgageMessagesClient {
             }
             companyMessagesListener = listener
         }
+    }
+    
+    public func getUnreadMessagesCount() -> Int {
+        return unreadCompanyMessageIds.count
+    }
+    
+    public func markCompanyMessagesRead(forUid uid: String) {
+        if unreadCompanyMessageIds.isEmpty {
+            return
+        }
+        
+        let companyMessagesRef = db
+            .collection("users")
+            .document(uid)
+            .collection(MortgageMessageSource.companyMessages.rawValue)
+        
+        for messageId in unreadCompanyMessageIds {
+            companyMessagesRef
+                .document(messageId)
+                .updateData(["read": true]) { error in
+                    if let error = error {
+                        print("Error: \(error.localizedDescription)")
+                    }
+                }
+        }
+        
+        unreadCompanyMessageIds = []
     }
     
     public func sendMessage(forUid uid: String, message: MortgageMessage) {

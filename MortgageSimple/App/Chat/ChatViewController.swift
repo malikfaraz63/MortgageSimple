@@ -36,7 +36,7 @@ class ChatViewController: MessagesViewController, MessagesDataSource {
         messagesCollectionView.messagesDataSource = self
         messagesCollectionView.messagesDisplayDelegate = self
         messagesCollectionView.messagesLayoutDelegate = self
-                
+        
         messageInputBar.sendButton.onTouchUpInside { _ in self.sendMessage() }
         
         viewDidAppear(true)
@@ -75,7 +75,7 @@ class ChatViewController: MessagesViewController, MessagesDataSource {
         let mortgageMessage = MortgageMessage(message: messageInputBar.inputTextView.text, sent: Date(), read: false)
         
         mortgageMessagesClient.sendMessage(forUid: uid, message: mortgageMessage)
-        
+        mortgageMessagesClient.markCompanyMessagesRead(forUid: uid)
         messageInputBar.inputTextView.text = ""
     }
     
@@ -104,6 +104,13 @@ class ChatViewController: MessagesViewController, MessagesDataSource {
             
             for message in companyMessages {
                 self.companyMessages.append(MessageViewModel(from: message, sender: self.company))
+            }
+            
+            let unreadCount = self.mortgageMessagesClient.getUnreadMessagesCount()
+            if (unreadCount > 0) {
+                self.tabBarItem.badgeValue = "\(unreadCount)"
+            } else {
+                self.tabBarItem.badgeValue = nil
             }
             
             self.messages.removeAll()
