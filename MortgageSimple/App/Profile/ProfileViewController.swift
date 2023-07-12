@@ -53,7 +53,7 @@ class ProfileViewController: UIViewController, LoginViewDelegate, SetupViewDeleg
         db
             .collection("users")
             .document(uid)
-            .getDocument(as: UserModel.self) { result in
+            .getDocument(as: MortgageUser.self) { result in
                 switch result {
                 case .success(let userModel):
                     self.updateDisplay(withUser: userModel)
@@ -82,7 +82,7 @@ class ProfileViewController: UIViewController, LoginViewDelegate, SetupViewDeleg
         db
             .collection("users")
             .document(user.uid)
-            .getDocument(as: UserModel.self) { result in
+            .getDocument(as: MortgageUser.self) { result in
                 switch result {
                 case .success(let userModel):
                     self.updateDisplay(withUser: userModel)
@@ -104,7 +104,7 @@ class ProfileViewController: UIViewController, LoginViewDelegate, SetupViewDeleg
         navigationController?.showDetailViewController(setupController, sender: nil)
     }
     
-    func userDidSetup(withUser userModel: UserModel) {
+    func userDidSetup(withUser userModel: MortgageUser) {
         updateDisplay(withUser: userModel)
         
         guard let uid = MortgageSettingsManager.getUserID() else { return }
@@ -114,7 +114,8 @@ class ProfileViewController: UIViewController, LoginViewDelegate, SetupViewDeleg
         var data: [String: Any] = [
             "address": userModel.address,
             "age": userModel.age,
-            "phone": userModel.phone
+            "phone": userModel.phone,
+            "clientUnread": userModel.clientUnread
         ]
         if let email = userModel.email {
             data.updateValue(email, forKey: "email")
@@ -157,7 +158,7 @@ class ProfileViewController: UIViewController, LoginViewDelegate, SetupViewDeleg
         emailLabel.text = "--"
     }
     
-    func updateDisplay(withUser user: UserModel) {
+    func updateDisplay(withUser user: MortgageUser) {
         showProfileInfoView()
         
         nameLabel.text = user.name

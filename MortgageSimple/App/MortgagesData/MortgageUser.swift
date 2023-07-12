@@ -7,11 +7,12 @@
 
 import Foundation
 
-struct UserModel: Codable {
+struct MortgageUser: Codable {
     let address: String
     let age: Int
     let name: String?
     let email: String?
     let phone: String
     let photoURL: String?
+    let clientUnread: Int
 }

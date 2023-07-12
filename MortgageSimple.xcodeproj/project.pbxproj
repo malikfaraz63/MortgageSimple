@@ -26,7 +26,7 @@
 		D94CD28D2A1CC98D007B96A7 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94CD28C2A1CC98D007B96A7 /* ProfileViewController.swift */; };
 		D94CD28F2A1CCACD007B96A7 /* SegueTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94CD28E2A1CCACD007B96A7 /* SegueTag.swift */; };
 		D94CD2912A1CCD6B007B96A7 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94CD2902A1CCD6B007B96A7 /* UIImageView.swift */; };
-		D94CD2952A1CF9B7007B96A7 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94CD2942A1CF9B7007B96A7 /* UserModel.swift */; };
+		D94CD2952A1CF9B7007B96A7 /* MortgageUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94CD2942A1CF9B7007B96A7 /* MortgageUser.swift */; };
 		D94CD2972A1D407B007B96A7 /* SetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94CD2962A1D407B007B96A7 /* SetupViewController.swift */; };
 		D94CD2992A1D42C0007B96A7 /* SetupViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94CD2982A1D42C0007B96A7 /* SetupViewDelegate.swift */; };
 		D94CD29B2A1D43DC007B96A7 /* StoryboardTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94CD29A2A1D43DC007B96A7 /* StoryboardTag.swift */; };
@@ -63,7 +63,7 @@
 		D94CD28C2A1CC98D007B96A7 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		D94CD28E2A1CCACD007B96A7 /* SegueTag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueTag.swift; sourceTree = "<group>"; };
 		D94CD2902A1CCD6B007B96A7 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
-		D94CD2942A1CF9B7007B96A7 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		D94CD2942A1CF9B7007B96A7 /* MortgageUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MortgageUser.swift; sourceTree = "<group>"; };
 		D94CD2962A1D407B007B96A7 /* SetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupViewController.swift; sourceTree = "<group>"; };
 		D94CD2982A1D42C0007B96A7 /* SetupViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupViewDelegate.swift; sourceTree = "<group>"; };
 		D94CD29A2A1D43DC007B96A7 /* StoryboardTag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardTag.swift; sourceTree = "<group>"; };
@@ -143,7 +143,7 @@
 		D94CD2932A1CF98D007B96A7 /* MortgagesData */ = {
 			isa = PBXGroup;
 			children = (
-				D94CD2942A1CF9B7007B96A7 /* UserModel.swift */,
+				D94CD2942A1CF9B7007B96A7 /* MortgageUser.swift */,
 				D94529D22A1EAF280096C1CE /* MortgageSettingsManager.swift */,
 			);
 			path = MortgagesData;
@@ -335,7 +335,7 @@
 				D9AE06462A1C19A8008B04EB /* Utility.swift in Sources */,
 				D94CD29B2A1D43DC007B96A7 /* StoryboardTag.swift in Sources */,
 				D94529D32A1EAF280096C1CE /* MortgageSettingsManager.swift in Sources */,
-				D94CD2952A1CF9B7007B96A7 /* UserModel.swift in Sources */,
+				D94CD2952A1CF9B7007B96A7 /* MortgageUser.swift in Sources */,
 				D94CD2912A1CCD6B007B96A7 /* UIImageView.swift in Sources */,
 				D9DAC4DE2A4C8DFD001FE503 /* AddMortgageViewController.swift in Sources */,
 				D91A27C92A1F94B900E97790 /* MortgageModel.swift in Sources */,

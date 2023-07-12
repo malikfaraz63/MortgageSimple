@@ -56,6 +56,7 @@ class ChatViewController: MessagesViewController, MessagesDataSource {
                 fetchMessages()
             }
         } else {
+            previousUserID = nil
             messages = []
             messagesCollectionView.reloadData()
         }
@@ -120,7 +121,7 @@ class ChatViewController: MessagesViewController, MessagesDataSource {
             self.messages.sort { $0.sentDate < $1.sentDate }
             self.messagesCollectionView.reloadData()
             
-            self.messagesCollectionView.scrollToLastItem(at: .bottom, animated: true)
+            self.messagesCollectionView.scrollToLastItem(at: .bottom, animated: false)
         }
     }
     

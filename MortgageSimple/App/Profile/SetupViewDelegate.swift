@@ -8,5 +8,5 @@
 import Foundation
 
 protocol SetupViewDelegate {
-    func userDidSetup(withUser user: UserModel)
+    func userDidSetup(withUser user: MortgageUser)
 }

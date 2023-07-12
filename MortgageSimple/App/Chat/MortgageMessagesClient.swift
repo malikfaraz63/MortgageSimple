@@ -58,6 +58,22 @@ class MortgageMessagesClient {
         }
     }
     
+    private func incrementUnreadMessages(forUid uid: String) {
+        let userRef = db
+            .collection("users")
+            .document(uid)
+        
+        userRef.getDocument(as: MortgageUser.self) { result in
+            switch result {
+            case .success(let user):
+                userRef
+                    .updateData(["clientUnread": user.clientUnread + 1])
+            case .failure(let error):
+                print("Error: \(error.localizedDescription)")
+            }
+        }
+    }
+    
     public func getUnreadMessagesCount() -> Int {
         return unreadCompanyMessageIds.count
     }
@@ -97,6 +113,8 @@ class MortgageMessagesClient {
                         print("Error: \(error.localizedDescription)")
                     }
                 }
+            
+            incrementUnreadMessages(forUid: uid)
         } catch let error {
             print("Error: \(error.localizedDescription)")
         }

@@ -36,7 +36,7 @@ class SetupViewController: UIViewController, UITextFieldDelegate {
         let age = Int(ageTextField.text!)!
         let phone = phoneTextField.text!
         
-        delegate?.userDidSetup(withUser: UserModel(address: address, age: age, name: user.displayName, email: user.email, phone: phone, photoURL: user.photoURL?.absoluteString))
+        delegate?.userDidSetup(withUser: MortgageUser(address: address, age: age, name: user.displayName, email: user.email, phone: phone, photoURL: user.photoURL?.absoluteString, clientUnread: 0))
         
         dismiss(animated: true)
     }
