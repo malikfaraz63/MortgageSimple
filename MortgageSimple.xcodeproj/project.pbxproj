@@ -11,7 +11,6 @@
 		D90601B52A1970760087A953 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = D90601B42A1970760087A953 /* FirebaseAuth */; };
 		D90601B72A1970760087A953 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = D90601B62A1970760087A953 /* FirebaseFirestoreSwift */; };
 		D90601BB2A197C740087A953 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = D90601BA2A197C740087A953 /* GoogleSignInSwift */; };
-		D90601BF2A197F700087A953 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D90601BE2A197F6F0087A953 /* GoogleService-Info.plist */; };
 		D90601C12A1985B20087A953 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90601C02A1985B20087A953 /* LoginViewController.swift */; };
 		D91A27C72A1F94B000E97790 /* MortgageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91A27C62A1F94B000E97790 /* MortgageManager.swift */; };
 		D91A27C92A1F94B900E97790 /* MortgageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91A27C82A1F94B900E97790 /* MortgageModel.swift */; };
@@ -30,6 +29,7 @@
 		D94CD2972A1D407B007B96A7 /* SetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94CD2962A1D407B007B96A7 /* SetupViewController.swift */; };
 		D94CD2992A1D42C0007B96A7 /* SetupViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94CD2982A1D42C0007B96A7 /* SetupViewDelegate.swift */; };
 		D94CD29B2A1D43DC007B96A7 /* StoryboardTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94CD29A2A1D43DC007B96A7 /* StoryboardTag.swift */; };
+		D9664FD02A6186A200B73438 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D9664FCF2A6186A200B73438 /* GoogleService-Info.plist */; };
 		D998E8362A597181007713C4 /* MortgageMessagesClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D998E8352A597181007713C4 /* MortgageMessagesClient.swift */; };
 		D9AE063D2A1C121A008B04EB /* FatSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9AE063C2A1C121A008B04EB /* FatSlider.swift */; };
 		D9AE06442A1C1603008B04EB /* BorrowingCalculatorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9AE06432A1C1603008B04EB /* BorrowingCalculatorController.swift */; };
@@ -48,7 +48,6 @@
 
 /* Begin PBXFileReference section */
 		D90601B82A1974890087A953 /* MortgageSimple.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MortgageSimple.entitlements; sourceTree = "<group>"; };
-		D90601BE2A197F6F0087A953 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../.Trash/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D90601C02A1985B20087A953 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		D91A27C62A1F94B000E97790 /* MortgageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MortgageManager.swift; sourceTree = "<group>"; };
 		D91A27C82A1F94B900E97790 /* MortgageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MortgageModel.swift; sourceTree = "<group>"; };
@@ -67,6 +66,7 @@
 		D94CD2962A1D407B007B96A7 /* SetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupViewController.swift; sourceTree = "<group>"; };
 		D94CD2982A1D42C0007B96A7 /* SetupViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupViewDelegate.swift; sourceTree = "<group>"; };
 		D94CD29A2A1D43DC007B96A7 /* StoryboardTag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardTag.swift; sourceTree = "<group>"; };
+		D9664FCF2A6186A200B73438 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D998E8352A597181007713C4 /* MortgageMessagesClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MortgageMessagesClient.swift; sourceTree = "<group>"; };
 		D9AE063C2A1C121A008B04EB /* FatSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FatSlider.swift; sourceTree = "<group>"; };
 		D9AE06432A1C1603008B04EB /* BorrowingCalculatorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorrowingCalculatorController.swift; sourceTree = "<group>"; };
@@ -240,7 +240,7 @@
 				D9AE063F2A1C1555008B04EB /* Auxilary */,
 				D9AE063E2A1C152A008B04EB /* App */,
 				D9FE94372A157668008D713C /* Info.plist */,
-				D90601BE2A197F6F0087A953 /* GoogleService-Info.plist */,
+				D9664FCF2A6186A200B73438 /* GoogleService-Info.plist */,
 			);
 			path = MortgageSimple;
 			sourceTree = "<group>";
@@ -316,7 +316,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D9FE94362A157668008D713C /* LaunchScreen.storyboard in Resources */,
-				D90601BF2A197F700087A953 /* GoogleService-Info.plist in Resources */,
+				D9664FD02A6186A200B73438 /* GoogleService-Info.plist in Resources */,
 				D9FE94332A157668008D713C /* Assets.xcassets in Resources */,
 				D9FE94312A157667008D713C /* Main.storyboard in Resources */,
 			);
