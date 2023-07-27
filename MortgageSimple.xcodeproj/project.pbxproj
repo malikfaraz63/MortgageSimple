@@ -124,6 +124,8 @@
 		D94CD2882A1CC33D007B96A7 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
+				D94CD2962A1D407B007B96A7 /* SetupViewController.swift */,
+				D94CD2982A1D42C0007B96A7 /* SetupViewDelegate.swift */,
 				D90601C02A1985B20087A953 /* LoginViewController.swift */,
 				D94CD2892A1CC7D4007B96A7 /* LoginViewDelegate.swift */,
 			);
@@ -134,8 +136,6 @@
 			isa = PBXGroup;
 			children = (
 				D94CD28C2A1CC98D007B96A7 /* ProfileViewController.swift */,
-				D94CD2962A1D407B007B96A7 /* SetupViewController.swift */,
-				D94CD2982A1D42C0007B96A7 /* SetupViewDelegate.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
